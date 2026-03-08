@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Skill Exchange Platform</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Skill Exchange Platform</h1>
+
+<p>Teach what you know • Learn what you want</p>
+
+<button onclick="toggleTheme()">Toggle Dark Mode</button>
+
+</header>
+
+
+<div class="dashboard">
+
+<div class="stat-card">
+<h3>Total Students</h3>
+<p id="totalStudents">0</p>
+</div>
+
+<div class="stat-card">
+<h3>Total Skills</h3>
+<p id="totalSkills">0</p>
+</div>
+
+<div class="stat-card">
+<h3>Active Matches</h3>
+<p id="totalMatches">0</p>
+</div>
+
+</div>
+
+
+<div class="main">
+
+
+<div class="form-card">
+
+<h2>Add / Update Profile</h2>
+
+<input type="text" id="name" placeholder="Name">
+
+<input type="text" id="contact" placeholder="Email / Phone">
+
+<input type="file" id="profilePic">
+
+<label>Skills You Can Teach</label>
+<input type="text" id="teach" placeholder="Python, Web Dev">
+
+<label>Skills You Want to Learn</label>
+<input type="text" id="learn" placeholder="ML, UI Design">
+
+<label>Skill Level</label>
+<select id="level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Expert</option>
+</select>
+
+<label>Availability</label>
+<select id="availability">
+<option>Weekends</option>
+<option>Evenings</option>
+<option>Anytime</option>
+</select>
+
+<button onclick="addUser()">Add Student</button>
+
+</div>
+
+
+<div class="list-card">
+
+<h2>Students</h2>
+
+<input type="text" id="search" placeholder="Search skill..." onkeyup="searchSkill()">
+
+<div id="studentList"></div>
+
+<h3>Popular Skills</h3>
+
+<div id="skillStats"></div>
+
+</div>
+
+</div>
+
+
+<div id="notification" class="notification"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
